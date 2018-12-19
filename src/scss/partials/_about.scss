@@ -2,7 +2,8 @@
   @include container($max-width: 40em);
   @include clearfix;
 
-  margin-top: 3em;
+  margin-top: 5em;
+  margin-bottom: 5em;
 
   &-img {
     max-height: 25em;
@@ -28,21 +29,42 @@
   @supports (display: grid) {
     display: grid;
     grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+    grid-column-gap: .2em;
 
     &-img {
       grid-column: port-start / img-end;
       grid-row: 1 / 2;
+
+      @include mq {
+        grid-row: 1 / 4;
+      }
     }
 
     &-title {
       grid-column: name-start / port-end;
       grid-row: 1 / 2;
       align-self: end;
+
+      @include mq {
+        grid-column: name-start / img-end;
+      }
     }
 
     &-subtitle,
     &-text {
       grid-column: port-start / port-end;
+
+      @include mq {
+        grid-column: img-end / port-end;
+      }
+    }
+
+    &-subtitle {
+      grid-row: 2 / 3;
+    }
+
+    &-text {
+      grid-row: 3 / 4;
     }
   }
 }
