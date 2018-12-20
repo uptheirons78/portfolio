@@ -1,3 +1,3 @@
-import App from './modules/app'; //es6 modules import example
+import { toggle } from './modules/Menu';
 
-const app = new App();
+toggle();
