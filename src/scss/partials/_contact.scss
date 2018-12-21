@@ -1,74 +1,51 @@
 .contact {
   @include container;
   padding: 5em 0;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   h1 {
     text-align: center;
   }
 
-  form {
-    display: flex;
-    flex-direction: column;
+  &-subtitle {
+    text-align: right;
+    // align-self: flex-end;
+  }
 
-    @supports (display: grid) {
-      @include mq {
-        display: grid;
-        grid-column: 1fr 1fr;
-        grid-column-gap: 1em;
-        grid-template-areas:
-        "name email"
-        "message message"
-        ". button";
+  &-container {
+    box-shadow: $shadow;
+    padding: 2rem 2.2rem;
+    max-width: 16em;
+  }
 
-        .name {
-          grid-area: name;
-        }
+  a:link, a:visited {
+    text-decoration: none;
+    color: currentColor;
+    border-bottom: 3px solid $accent;
+    box-shadow: 0px 0px 0px 0px $accent inset;
+    transition: box-shadow 250ms ease-in-out, color 250ms ease-in-out, -webkit-box-shadow 250ms ease-in-out;
+  }
 
-        .email {
-          grid-area: email;
-        }
+  a:hover, a:active {
+    box-shadow: 0px -30px 0px 0px $accent inset;
+    color: $white;
 
-        .message {
-          grid-area: message;
-          textarea {
-            height: 10em;
-          }
-        }
+  }
 
-        .button {
-          grid-area: button;
-        }
-      }
+  .underlined {
+    box-shadow: 0px 0px 0px 0px $accent inset;
+    border-bottom: 3px solid $accent;
+    transition: box-shadow 250ms ease-in-out, color 250ms ease-in-out, -webkit-box-shadow 250ms ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0px -30px 0px 0px $accent inset;
+      color: $white;
     }
-
   }
 
-  label {
-    display: block;
-    margin-top: 1em;
-    color: $dark-gray;
-  }
-
-  input,
-  textarea {
-    box-sizing: border-box;
-    display: block;
-    padding: .75em;
-    width: 100%;
-    // min-width: 15em;
-    background: lighten($light-gray, 7%);
-    border: 1px solid $light-gray;
-    font-size: 1.2rem;
-  }
-
-  .button {
-    display: inline-block;
-    width: auto;
-    margin-top: 1em;
-    margin-left: auto;
-    background: $accent;
-    border: none;
-    @include sans-serif($fs: 2rem, $color: $white);
-    padding: .3em 1.2em;
-  }
 }

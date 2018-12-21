@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Mauro Bono | Web Designer &amp; Developer</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,900|Six+Caps">
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Gothic+A1:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="./dist/css/style.min.css" />
   </head>
   <body>
@@ -25,7 +26,15 @@
 
     <!-- HERO SECTION -->
     <div class="welcome">
-      <h1>Welcome to my <span>Portfolio</span></h1>
+      <div class="welcome__wrapper">
+        <img class="welcome__img" src="./dist/img/programmer.jpeg" alt="Mauro Bono Designer and Developer">
+        <h1 class="welcome__title">Mauro <br>Bono</h1>
+        <div class="welcome__info">
+          <p>Hi, my name is Mauro.</p>
+          <p>I am a Web Designer and Developer based in Rome, Italy.</p>
+          <p><a href="#portfolio">Check my works</a> or <br><a href="#contact">get in touch</a></p>
+        </div>
+      </div>
     </div>
     <!-- HERO SECTION END -->
 
@@ -36,7 +45,7 @@
       </div>
       <div class="intro-middle">
         <h2>Making it happen</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta rem pariatur sed voluptatem ratione</p>
+        <p>If you want your company to be more successful in the modern marketplace, you’ve got to have a professional website to make the right first impression to your potential clients. <br>So ...let's build yours together.</p>
       </div>
       <div class="intro-right">
         <img src="./dist/img/welcome-02.png" alt="desktop computers">
@@ -45,19 +54,40 @@
     <!-- WELCOME SECTION END -->
 
     <!-- ABOUT ME SECTION -->
-    <div class="about">
+    <div class="about" id="about">
       <img class="about-img" src="./dist/img/joe-portfolio.png" alt="picture of me">
-      <h1 class="about-title">Mauro Portfolio</h1>
+      <h1 class="about-title">About <br>me</h1>
       <h2 class="about-subtitle">Designer and Developer</h2>
       <div class="about-text">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti laborum, mollitia laudantium consequuntur quia repellendus. Cum iure ut, quasi non, ullam error ad qui sunt aut dolores quisquam nam iste.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti laborum, mollitia laudantium consequuntur quia repellendus. Cum iure ut, quasi non, ullam error ad qui sunt aut dolores quisquam nam iste.</p>
+        <p class="paragraph">
+          I'm a web designer and full stack developer from Rome, Italy.
+          <br>
+          I've been creating on the web for <span class="underlined">almost 7 years</span> and I'm <span class="underlined">highly
+            experienced</span> in designing and developing beautiful user experiences to enhance digital products and service
+          offerings.
+          <br>
+          When not programming, I love to spend my time with my wife Valentina, my daughter Chloe and Darth, my dog. I'm
+          obsessed
+          with reading, running and rock music. <br>I hang out on <a href="https://twitter.com/UpTheIrons1978" class="link" target="_blank">Twitter</a>
+          and <a href="https://www.facebook.com/mauro.bono.374" class="link" target="_blank">Facebook</a> and would love to
+          meet you!
+        </p>
+        <p class="paragraph">
+          <strong>Skillset and Interest</strong>: I spend most of my time working with <span class="underlined">HTML5</span>,
+          <span class="underlined">CSS3</span> and <span class="underlined">Javascript</span>. I'm specialized in <span class="underlined">Advanced
+            Wordpress</span> with a good knowledge of <span class="underlined">PHP</span>.
+          <br>
+          I really like to work with <span class="underlined">Node JS</span>, <span class="underlined">Express</span>, <span
+            class="underlined">MongoDB</span>, <span class="underlined">MySQL</span> and with modern workflow tools like Sass,
+          Gulp or Webpack. I'm also proficient at <span class="underlined">React</span>. <br>I'm proudly a <a href="https://www.freecodecamp.org/certification/kubuniwebdesigner/legacy-front-end"
+            class="link" target="_blank">FreeCodeCamp</a> certified since Sept 2017.
+        </p>
       </div>
     </div>
     <!-- ABOUT ME SECTION END -->
 
     <!-- PORTFOLIO SECTION -->
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="container"></div>
       <h1>My Work</h1>
       <div class="portfolio-items">
@@ -122,35 +152,48 @@
     <!-- PORTFOLIO SECTION END -->
 
     <!-- CONTACT SECTION -->
-    <section class="contact">
+    <section class="contact" id="contact">
       <h1>Contact me</h1>
-      <form action="">
-        <label for="name" class="name">Name:
-          <input type="text" id="name">
-        </label>
+      <h2 class="contact-subtitle">Let's build<br> something <br>great!</h2>
 
-        <label for="email" class="email">Email:
-          <input type="text" id="email">
-        </label>
-
-        <label message="message" class="message">Message:
-          <textarea name="" id="message"></textarea>
-        </label>
-
-        <input class="button form-button" type="submit" value="SEND">
-      </form>
+      <div class="contact-container">
+        <p class="paragraph">
+          If you like my <a href="#portfolio" class="link">works</a> and have some cool project to build,
+          just send me a <a href="mailto:mauro@maurobono.com" class="link">direct message</a> or contact me
+          through my social media listed below.
+          <br>
+          My mobile number is <span class="underlined">+39 389 2983674</span>
+        </p>
+      </div>
     </section>
     <!-- CONTACT SECTION END -->
 
     <!-- FOOTER -->
     <footer class="footer">
       <p>Follow me on social media</p>
-      <div class="social-icons">
-        <img class="social-icon" src="./dist/img/twitter.svg" alt="twitter">
-        <img class="social-icon" src="./dist/img/instagram.svg" alt="instagram">
-        <img class="social-icon" src="./dist/img/github.svg" alt="github.svg">
+      <div class="icon-container">
+        <a href="mailto:mauro@maurobono.com" class="link">
+          <svg class="icon">
+            <use xlink:href="./dist/img/sprite.svg#icon-mail"></use>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/mauro.bono.374" class="link">
+          <svg class="icon">
+            <use xlink:href="./dist/img/sprite.svg#icon-facebook"></use>
+          </svg>
+        </a>
+        <a href="https://twitter.com/UpTheIrons1978" class="link">
+          <svg class="icon">
+            <use xlink:href="./dist/img/sprite.svg#icon-twitter"></use>
+          </svg>
+        </a>
+        <a href="https://github.com/uptheirons78" class="link">
+          <svg class="icon">
+            <use xlink:href="./dist/img/sprite.svg#icon-github"></use>
+          </svg>
+        </a>
       </div>
-      <p class="copyright">Copyright 2018 Mauro Bono</p>
+      <p class="copyright">Copyright &copy; <span id="prev-year">&nbsp;</span> &ndash; <span id="curr-year">&nbsp;</span> Mauro Bono</p>
     </footer>
     <!-- FOOTER END -->
 

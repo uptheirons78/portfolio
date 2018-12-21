@@ -2,49 +2,81 @@
   background-image: url(../img/header-bg.png);
   background-size: cover;
   background-position: center;
-
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
+  &__wrapper {
+    @include container($max-width: 35em);
+    display: grid;
+    grid-template-columns: 2fr minmax(6em, 1fr) minmax(6em, 1fr);
+    margin-bottom: 12vh;
+  }
 
-  h1 {
-    font-size: 1.5rem;
-    font-weight: $fw-n;
-    color: $dark-blue;
-    line-height: 2;
-    text-align: center;
+  &__img {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+  }
+
+  &__title {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    margin-left: .6em;
+    font-family: $ff-s;
+    text-transform: uppercase;
+    position: relative;
+    top: -.9em;
+    left: -.4em;
+
+    @include mq($width: 29em) {
+      margin-left: 1.4em;
+      font-size: 3.5rem;
+      left: -0.1em;
+    }
 
     @include mq {
-      font-size: 3vw;
-    }
-
-
-    span {
-      @include sans-serif($fs: 5.5rem, $color: $accent);
-      display: block;
-
-      @include mq {
-        font-size: 10vw;
-      }
-
-    }
-
-    &::before, &::after {
-      content: '';
-      display: block;
-      width: 60%;
-      height: 1px;
-      background: $dark-blue;
-    }
-
-    &::before {
-      margin: 0 auto 2em;
-    }
-
-    &::after {
-      margin: 2em auto 0;
+      margin-left: 1.4em;
+      font-size: 4.5rem;
     }
   }
+
+  &__info {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    align-self: end;
+    position: relative;
+    top: 9em;
+    background: $accent;
+    color: $white;
+    font-family: $ff-ss;
+    font-size: 1rem;
+    padding: .3em 1.3em;
+    box-shadow: $shadow;
+
+    @include mq {
+      font-size: 1.4rem;
+      top: 7em;
+    }
+
+    p {
+      margin: .3em;
+    }
+
+    a:link, a:visited {
+      text-decoration: none;
+      color: $white;
+      border-bottom: 1px solid $white;
+      box-shadow: 0px 0px 0px 0px $white inset;
+      transition: box-shadow 250ms ease-in-out, color 250ms ease-in-out, -webkit-box-shadow 250ms ease-in-out;
+    }
+
+    a:hover, a:active {
+      color: $accent;
+      box-shadow: 0px -30px 0px 0px $white inset;
+    }
+  }
+
+
+
 }

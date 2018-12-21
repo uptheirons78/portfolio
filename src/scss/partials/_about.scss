@@ -26,6 +26,22 @@
     text-align: justify;
   }
 
+  a:link, a:visited {
+    text-decoration: none;
+    color: currentColor;
+    border-bottom: 3px solid $accent;
+  }
+
+  .underlined {
+    border-bottom: 3px solid $accent;
+  }
+
+  strong {
+    color: $accent;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
   @supports (display: grid) {
     display: grid;
     grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
