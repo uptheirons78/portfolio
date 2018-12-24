@@ -3,8 +3,7 @@ body {
   font-family: $ff-ss;
   line-height: 1.6;
   background: $white;
-  // font-size: .875rem;
-  font-size: 1rem;
+  font-size: .875rem;
 
   @include mq {
     font-size: 1.125rem;
@@ -24,20 +23,22 @@ h1 {
   font-family: $ff-s;
   color: $accent;
   line-height: 1;
-  font-size: 3.125rem;
+  font-size: 2.4rem;
   text-transform: uppercase;
+  text-shadow: 1px 1px 0 rgba($dark-blue, 0.5);
+  letter-spacing: 3px;
 
   @include mq {
-    font-size: 3.6rem;
+    font-size: 3rem;
   }
 
 }
 
 h2 {
-  @include sans-serif($fs: 2rem, $color: $dark-gray);
+  @include sans-serif($fs: 1.6rem, $color: $dark-gray);
 
   @include mq {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
   }
 }
 

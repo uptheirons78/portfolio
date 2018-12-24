@@ -7,25 +7,28 @@
     <title>Mauro Bono | Web Designer &amp; Developer</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,900|Six+Caps">
     <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Gothic+A1:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.5/css/swiper.min.css">
     <link rel="stylesheet" href="./dist/css/style.min.css" />
   </head>
   <body>
 
+    <!-- NAVIGATION -->
     <div class="navigation">
       <!-- NAV -->
       <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a class="mobile-link" href="#home">Home</a></li>
+          <li><a class="mobile-link" href="#about">About</a></li>
+          <li><a class="mobile-link" href="#portfolio">Portfolio</a></li>
+          <li><a class="mobile-link" href="#contact">Contact</a></li>
         </ul>
       </nav>
       <!-- NAV END -->
     </div>
+    <!-- NAVIGATION END -->
 
     <!-- HERO SECTION -->
-    <div class="welcome">
+    <div id="home" class="welcome">
       <div class="welcome__wrapper">
         <img class="welcome__img" src="./dist/img/programmer.jpeg" alt="Mauro Bono Designer and Developer">
         <h1 class="welcome__title">Mauro <br>Bono</h1>
@@ -45,7 +48,12 @@
       </div>
       <div class="intro-middle">
         <h2>Making it happen</h2>
-        <p>If you want your company to be more successful in the modern marketplace, you’ve got to have a professional website to make the right first impression to your potential clients. <br>So ...let's build yours together.</p>
+        <p>If you want your company to be more successful in the modern marketplace, you’ve got to have a professional website to make the right first impression to your potential clients. 
+          <br>
+          <a href="#contact">
+            Let's build yours together!
+          </a>
+        </p>
       </div>
       <div class="intro-right">
         <img src="./dist/img/welcome-02.png" alt="desktop computers">
@@ -88,82 +96,125 @@
 
     <!-- PORTFOLIO SECTION -->
     <section class="portfolio" id="portfolio">
-      <div class="container"></div>
-      <h1>My Work</h1>
-      <div class="portfolio-items">
+      <h1>My Works</h1>
+      <div class="swiper-container">
+        
+        <div class="swiper-wrapper">
 
-        <!-- Portfolio Item 1 -->
-        <figure class="portfolio-item featured">
-          <img src="./dist/img/portfolio-01.jpg" alt="portfolio item">
-          <figcaption>
-            <h2 class="portfolio-title">Project Name</h2>
-            <p class="portfolio-description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-            <a href="#" class="portfolio-link">More Info</a>
-          </figcaption>
-        </figure>
-        <!-- Portfolio Item 1 end -->
+          <!-- Swiper Slide 1 -->
+          <div class="swiper-slide">
+            <div class="swiper-slide__img-box">
+              <img src="http://lorempixel.com/300/380/nature/3" alt="img 1">
+            </div>
+            <div class="swiper-slide__details">
+              <h3>Travel Agency Website</h3>
+              
+              
+              <ul class="tag-list">
+                <li class="tag-list__item">HTML5</li>
+                <li class="tag-list__item">CSS3</li>
+                <li class="tag-list__item">JAVASCRIPT</li>
+                <li class="tag-list__item">ES6</li>
+              </ul>
 
-        <!-- Portfolio Item 2 -->
-        <figure class="portfolio-item">
-          <img src="./dist/img/portfolio-02.jpg" alt="portfolio item">
-          <figcaption>
-            <h2 class="portfolio-title">Project Name</h2>
-            <p class="portfolio-description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-            <a href="#" class="portfolio-link">More Info</a>
-          </figcaption>
-        </figure>
-        <!-- Portfolio Item 2 end -->
+              <div class="button-container">
+                <a class="project-link" href="#" target="_blank">Website</a>
+                <a class="project-link" href="#" target="_blank">Github</a>
+              </div>
+              
+            
+            </div>
+            <div class="title">
+              <h2>Natours</h2>
+            </div>
+          </div>
+          <!-- Swiper Slide 1 End -->
 
-        <!-- Portfolio Item 3 -->
-        <figure class="portfolio-item">
-          <img src="./dist/img/portfolio-03.jpg" alt="portfolio item">
-          <figcaption>
-            <h2 class="portfolio-title">Project Name</h2>
-            <p class="portfolio-description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-            <a href="#" class="portfolio-link">More Info</a>
-          </figcaption>
-        </figure>
-        <!-- Portfolio Item 3 end -->
+          <!-- Swiper Slide 1 -->
+          <div class="swiper-slide">
+            <div class="swiper-slide__img-box">
+              <img src="http://lorempixel.com/300/380/nature/4" alt="img 1">
+            </div>
+            <div class="swiper-slide__details">
+              <h3>Travel Agency Website</h3>
+              
+              
+              <ul class="tag-list">
+                <li class="tag-list__item">HTML5</li>
+                <li class="tag-list__item">CSS3</li>
+                <li class="tag-list__item">JAVASCRIPT</li>
+                <li class="tag-list__item">ES6</li>
+              </ul>
 
-        <!-- Portfolio Item 4 -->
-        <figure class="portfolio-item">
-          <img src="./dist/img/portfolio-04.jpg" alt="portfolio item">
-          <figcaption>
-            <h2 class="portfolio-title">Project Name</h2>
-            <p class="portfolio-description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-            <a href="#" class="portfolio-link">More Info</a>
-          </figcaption>
-        </figure>
-        <!-- Portfolio Item 4 end -->
+              <div class="button-container">
+                <a class="project-link" href="#" target="_blank">Website</a>
+                <a class="project-link" href="#" target="_blank">Github</a>
+              </div>
+              
+            
+            </div>
+            <div class="title">
+              <h2>Natours</h2>
+            </div>
+          </div>
+          <!-- Swiper Slide 1 End -->
 
-        <!-- Portfolio Item 5 -->
-        <figure class="portfolio-item">
-          <img src="./dist/img/portfolio-05.jpg" alt="portfolio item">
-          <figcaption>
-            <h2 class="portfolio-title">Project Name</h2>
-            <p class="portfolio-description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-            <a href="#" class="portfolio-link">More Info</a>
-          </figcaption>
-        </figure>
-        <!-- Portfolio Item 5 end -->
+          <!-- Swiper Slide 1 -->
+          <div class="swiper-slide">
+            <div class="swiper-slide__img-box">
+              <img src="http://lorempixel.com/300/380/nature/5" alt="img 1">
+            </div>
+            <div class="swiper-slide__details">
+              <h3>Travel Agency Website</h3>
+              
+              
+              <ul class="tag-list">
+                <li class="tag-list__item">HTML5</li>
+                <li class="tag-list__item">CSS3</li>
+                <li class="tag-list__item">JAVASCRIPT</li>
+                <li class="tag-list__item">ES6</li>
+              </ul>
 
+              <div class="button-container">
+                <a class="project-link" href="#" target="_blank">Website</a>
+                <!-- <a class="project-link" href="#" target="_blank">Github</a> -->
+              </div>
+              
+            
+            </div>
+            <div class="title">
+              <h2>Natours</h2>
+            </div>
+          </div>
+          <!-- Swiper Slide 1 End -->
+
+        </div>
+
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Pagination End -->
       </div>
+      
     </section>
     <!-- PORTFOLIO SECTION END -->
 
     <!-- CONTACT SECTION -->
     <section class="contact" id="contact">
-      <h1>Contact me</h1>
-      <h2 class="contact-subtitle">Let's build<br> something <br>great!</h2>
-
-      <div class="contact-container">
-        <p class="paragraph">
-          If you like my <a href="#portfolio" class="link">works</a> and have some cool project to build,
-          just send me a <a href="mailto:mauro@maurobono.com" class="link">direct message</a> or contact me
-          through my social media listed below.
-          <br>
-          My mobile number is <span class="underlined">+39 389 2983674</span>
-        </p>
+      <div class="contact__wrapper">
+        <h1>Contact<br>me</h1>
+        <h2 class="contact-subtitle">Let's build<br>something<br>great!</h2>
+  
+        <div class="contact-container">
+          <p class="paragraph">
+            If you like my <a href="#portfolio" class="link">works</a> and have some cool project to build,
+            just send me a <a href="mailto:mauro@maurobono.com" class="link">direct message</a> or contact me
+            through my social media listed below.
+            <br>
+            Email: <span class="underlined">mauro@maurobono.com</span>
+            <br>
+            Mobile: <span class="underlined">+39 389 2983674</span>
+          </p>
+        </div>
       </div>
     </section>
     <!-- CONTACT SECTION END -->

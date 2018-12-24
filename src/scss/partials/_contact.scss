@@ -1,25 +1,36 @@
 .contact {
-  @include container;
-  padding: 5em 0;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 5em 0 2em;
+  
+  &__wrapper {
+    @include container($max-width: 30em);
+    height: 420px;
+    position: relative;
+  }
+  
 
   h1 {
-    text-align: center;
+    text-align: left;
+    margin-bottom: 1em;
+    position: absolute;
+    left: 5%;
   }
-
+  
   &-subtitle {
     text-align: right;
-    // align-self: flex-end;
+    position: absolute;
+    top: 15%;
+    right: 0;
   }
 
   &-container {
+    width: 80%;
+    line-height: 1.8;
     box-shadow: $shadow;
-    padding: 2rem 2.2rem;
-    max-width: 16em;
+    padding: 1em;
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+
   }
 
   a:link, a:visited {

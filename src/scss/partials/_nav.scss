@@ -11,7 +11,7 @@
   opacity: 0;
   width: 100vw;
   height: 100vh;
-  background-image: radial-gradient(#7ed56f, $accent);
+  background-image: radial-gradient($accent, lighten($accent, 15%));
   z-index: 99;
   transition: all .7s cubic-bezier(0.19, 1, 0.22, 1);
 
@@ -37,8 +37,9 @@
         a:link,
         a:visited {
           text-decoration: none;
-          font-size: 1.4rem;
+          font-size: 1.6rem;
           color: rgba($white, .9);
+          font-weight: 500;
           text-transform: uppercase;
           letter-spacing: 2px;
           padding: 0.6rem 1rem 0.2rem 1rem;
@@ -59,75 +60,100 @@
 }
 
 .hamburger-container {
-      text-align: center;
-      background: #fff;
-      height: 4.6rem;
-      width: 4.6rem;
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      border-radius: 50%;
-      z-index: 100;
-      box-shadow: 0 1rem 3rem rgba(0,0,0,0.4);
-      cursor: pointer;
+  text-align: center;
+  background: #fff;
+  position: fixed;
+  height: 3.2rem;
+  width: 3.2rem;
+  top: 1em;
+  right: 1em;
+  border-radius: 50%;
+  z-index: 100;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,0.4);
+  cursor: pointer;
+  
+  @include mq {
+    height: 4.6rem;
+    width: 4.6rem;
+    top: 3em;
+    right: 3em;
+  }
 
-      .navigation-icon {
-        position: relative;
-        margin-top: 2.3rem;
+  .navigation-icon {
+    position: relative;
+    margin-top: 1.6rem;
+    
+    @include mq {
+      margin-top: 2.3rem;
+    }
 
-        &,
-        &::before,
-        &::after {
-          width: 2rem;
-          height: 2px;
-          background-color: $accent;
-          display: inline-block;
-        }
+    &,
+    &::before,
+    &::after {
+      width: 1.6rem;
+      height: 2px;
+      background-color: $accent;
+      display: inline-block;
+      
+      @include mq {
+        width: 2rem;
+      }
+    }
 
-        &::before,
-        &::after {
-          content: '';
-          position: absolute;
-          left: 0;
-          transition: all 0.3s ease-in-out;
-        }
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &::before {
+      top: -0.5rem;
+      
+      @include mq {
+        top: -0.6rem;
+
+      }
+    }
+
+    &::after {
+      top: 0.5rem;
+      
+      @include mq {
+        top: 0.65rem;
+
+      }
+    }
+
+    &.toggled {
+      background-color: transparent;
+
+      &::before {
+        top: 0;
+        transform: rotate(135deg);
+      }
+
+      &::after {
+        top: 0;
+        transform: rotate(-135deg);
+      }
+
+      &.toggled {
+        background-color: transparent;
 
         &::before {
-          top: -0.6rem;
+          top: 0;
+          transform: rotate(135deg);
         }
 
         &::after {
-          top: 0.65rem;
-        }
-
-        &.toggled {
-          background-color: transparent;
-
-          &::before {
-            top: 0;
-            transform: rotate(135deg);
-          }
-
-          &::after {
-            top: 0;
-            transform: rotate(-135deg);
-          }
-
-          &.toggled {
-            background-color: transparent;
-
-            &::before {
-              top: 0;
-              transform: rotate(135deg);
-            }
-
-            &::after {
-              top: 0;
-              transform: rotate(-135deg);
-            }
-          }
-
+          top: 0;
+          transform: rotate(-135deg);
         }
       }
+
+    }
   }
+}
 

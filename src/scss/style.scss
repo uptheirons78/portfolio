@@ -3,10 +3,12 @@
 @import './modules/mixins';
 @import './vendor/normalize';
 @import './partials/base';
+@import '../../node_modules/swiper/dist/css/swiper.min.css';
 @import './partials/welcome';
 @import './partials/intro';
 @import './partials/about';
 @import './partials/portfolio';
+@import './partials/services';
 @import './partials/contact';
 @import './partials/footer';
 @import './partials/nav';

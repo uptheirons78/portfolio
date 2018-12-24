@@ -1,0 +1,103 @@
+.services {
+  text-align: center;
+  // background: $light-gray;
+  background: rgba($accent, .1);
+  padding: 5em 0;
+
+  &-items {
+    display: flex;
+    flex-wrap: wrap;
+    @include container($max-width: 60em);
+  }
+
+  &-item {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+
+    flex: 1 1 20rem;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    figcaption {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 2em;
+      background: rgba($accent, .75);
+      color: $white;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      transition: top .3s ease-in-out;
+    }
+
+    &:hover figcaption,
+    &:focus figcaption {
+        top: 0;
+    }
+
+  }
+
+  &-link {
+    color: $white;
+    font-weight: $fw-b;
+    font-size: .8rem;
+    text-decoration: none;
+    border-bottom: 2px solid $white;
+    align-self: flex-start;
+
+    &::after {
+      content: url(../img/arrow.svg);
+      display: inline-block;
+      height: .8em;
+      width: .8em;
+      margin-left: .5em;
+    }
+  }
+
+  &-title {
+    color: $white;
+    font-size: 2rem;
+    margin-bottom: auto;
+  }
+
+  &-description {
+    display: none;
+  }
+
+  @supports (display: grid) {
+    &-items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: .75em;
+
+      @include mq {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    &-item.featured {
+      grid-column: 1 / span 2;
+      grid-row: 1 / 3;
+    }
+
+    .featured &-title {
+      font-size: 3rem;
+    }
+
+    .featured &-description {
+      display: block;
+    }
+
+    .featured &-link {
+      font-size: 1.1rem;
+    }
+  }
+
+}
